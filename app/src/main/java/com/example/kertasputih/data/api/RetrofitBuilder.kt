@@ -1,16 +1,18 @@
 package com.example.kertasputih.data.api
 
+import com.example.kertasputih.BuildConfig
+import okhttp3.OkHttpClient
 import retrofit2.Retrofit
-import retrofit2.converter.moshi.MoshiConverterFactory
-import retrofit2.create
+import retrofit2.converter.gson.GsonConverterFactory
+import java.util.concurrent.TimeUnit
 
 object RetrofitBuilder {
-    private const val BASE_URL = ""
+    private const val BASE_URL = "https://my-json-server.typicode.com/prasetyanurangga/api_server/"
 
     private fun getRetrofit(): Retrofit{
         return Retrofit.Builder()
             .baseUrl(BASE_URL)
-            .addConverterFactory(MoshiConverterFactory.create())
+            .addConverterFactory(GsonConverterFactory.create())
             .build()
     }
 

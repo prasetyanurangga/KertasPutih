@@ -7,10 +7,11 @@ import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.example.kertasputih.R
 import com.example.kertasputih.data.model.UserModel
+import com.example.kertasputih.ui.adapter.MainAdapter.DataViewHolder
 import kotlinx.android.synthetic.main.recycle_view.view.*
 
 
-class MainAdapter(private val users: ArrayList<UserModel>) : RecyclerView.Adapter<MainAdapter.DataViewHolder>() {
+class MainAdapter(private val users: ArrayList<UserModel>) : RecyclerView.Adapter<DataViewHolder>() {
 
     class DataViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
 

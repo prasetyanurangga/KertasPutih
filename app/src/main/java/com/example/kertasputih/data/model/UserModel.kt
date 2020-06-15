@@ -1,17 +1,15 @@
 package com.example.kertasputih.data.model
 
-import com.squareup.moshi.Json
+import com.google.gson.annotations.SerializedName
+
 
 data class UserModel(
-    @Json(name = "id")
-    val id: String,
-
-    @Json(name = "name")
-    val name: String,
-
-    @Json(name = "email")
+    @SerializedName("avatar")
+    val avatar: String,
+    @SerializedName("email")
     val email: String,
-
-    @Json(name = "avatar")
-    val avatar: String
+    @SerializedName("id")
+    val id: String,
+    @SerializedName("name")
+    val name: String
 )

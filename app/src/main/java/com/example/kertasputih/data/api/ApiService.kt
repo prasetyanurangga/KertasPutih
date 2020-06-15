@@ -4,6 +4,7 @@ import com.example.kertasputih.data.model.UserModel
 import retrofit2.http.GET
 
 interface ApiService {
-    @GET("")
+
+    @GET("user")
     suspend fun getUsers(): List<UserModel>
 }
